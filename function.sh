@@ -7,5 +7,5 @@ validate (){
         echo "${2} sucess"
     fi    
 }
-dnf install mysqk -y 
-validate $? "nginx install"
+dnf install mysql -y 
+validate $? "mysql install"
