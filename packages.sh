@@ -1,5 +1,5 @@
  # install nginx
-    dnf install nginx -y
+    dnf install nginxx -y
     if [ &? -ne 0 ]; then 
         echo "nginx instalation is failed.."
         exit 1
