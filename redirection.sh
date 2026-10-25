@@ -6,3 +6,5 @@ if [ $ user_id -ne 0 ]; then
     echo "run with sudo access"
     exit 1
 fi
+mkdir -p $log_folder
+    echo "script start time $(date)"
