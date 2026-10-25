@@ -8,14 +8,14 @@ if [ $user_id -ne 0 ]; then
     exit 1
 fi
 mkdir -p $log_folder
-    echo "script start time $(date +"%F %T")" #&>> log_file
+    echo "script start time $(date +"%F %T")" &>> log_file
 
 validate (){
     if [ $1 -ne 0 ]; then
-        echo "${2}..failed" | tee -a #&>> log_file
+        echo "${2}..failed" | tee -a &>> log_file
         exit 1
     else 
-        echo "${2}..sucess" | tee -a #&>> log_file
+        echo "${2}..sucess" | tee -a &>> log_file
     fi
 }
 
@@ -25,7 +25,7 @@ validate $? "htop installed"
 dnf install mysqll -y &>> log_file
 validate $? "mysql installed"
 
-    echo "the task is completed $(date +"%F %T")" #&>> log_file
+    echo "the task is completed $(date +"%F %T")" &>> log_file
 
 
 
