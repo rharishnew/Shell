@@ -7,4 +7,4 @@ if [ $ user_id -ne 0 ]; then
     exit 1
 fi
 mkdir -p $log_folder
-    echo "script start time $(date)"
+    echo "script start time $(date)" &>> log_file
