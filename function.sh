@@ -2,13 +2,11 @@
 validate (){
     if [ $1 -ne 0 ]; then
     echo "${2} failed.. "
+    exit 1
     esle 
         echo "${2} sucess"
-        exit 1
     fi    
 }
-dnf install nginx -y 
-if [$? -ne 0 ]; then
+dnf install htop -y 
+
     validate $? "nginx install"
-
-
