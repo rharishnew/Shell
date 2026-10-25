@@ -7,6 +7,5 @@ validate (){
         echo "${2} sucess"
     fi    
 }
-dnf install htop -y 
-
-    validate $? "nginx install"
+dnf install mysqk -y 
+validate $? "nginx install"
