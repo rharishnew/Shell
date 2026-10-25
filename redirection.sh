@@ -22,10 +22,18 @@ validate (){
 dnf install htop -y &>> log_file
 validate $? "htop installed"
 
-dnf install mysqll -y &>> log_file
+dnf install mysql -y &>> log_file
 validate $? "mysql installed"
 
-    echo "the task is completed $(date +"%F %T")" &>> log_file
+dnf remove htop -y &>> log_file
+validate $? "htop removed"
+
+dnf remove mysql -y &>> log_file
+validate $? "mysql removed"
+
+sleep 10
+
+echo "the task is completed $(date +"%F %T")" &>> log_file
 
 
 
