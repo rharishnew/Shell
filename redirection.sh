@@ -11,7 +11,7 @@ mkdir -p $log_folder
     echo "script start time $(date +"%F %T")" &>> log_file
 
 validate (){
-    if ( $1 -ne 0 ); then
+    if [ $1 -ne 0 ]; then
         echo "${2}..failed" | tree -a &>> log_file
         exit 1
     esle 
