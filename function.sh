@@ -7,7 +7,7 @@ validate (){
         exit 1
     fi    
 }
-dfn install nginxx -y 
+dnf install nginxx -y 
 if [$? -ne 0 ]; then
     validate $? "nginx install"
 
